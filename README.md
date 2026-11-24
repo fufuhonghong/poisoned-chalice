@@ -131,6 +131,8 @@ The validated default run on 23 November 2026 used layer 12, seed 42, MPS, float
 | Norm-matched random | 0.020 | 0.000879 | 45% |
 | Random layer ablation | 1.000 | 0.047008 | 25% |
 
+![Measured dose-response experiment](results/default_run/dose_response.png)
+
 The smoke prompt `17 × 23` produced `391` before intervention, `569` after the `d=0.01` gradient update, and `391` after restoration. The complete raw responses, parameter counts, norms, metadata, and plots are in `results/default_run/`. This canonical run and `results/validation.json` are included; later ad hoc result folders remain gitignored.
 
 ## Restoration and memory model
@@ -177,4 +179,3 @@ results/            generated results (gitignored)
 
 Project code is released under the [MIT License](LICENSE). Qwen weights are separately governed by the model's [Apache 2.0 license and model card](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct). The project is not affiliated with Qwen, Hugging Face, or Gradio.
 
-<!-- Add a real dashboard screenshot here after a validated local launch. -->
