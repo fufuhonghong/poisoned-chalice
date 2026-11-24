@@ -24,21 +24,31 @@ It is not a hidden prompt or a new training run. After the model is loaded, the 
 
 整杯“毒酒”可以写成四行： / The entire intervention fits in four lines:
 
+① 正确答案的损失 / Answer loss
+
 $$
-\begin{aligned}
 \mathcal L(\theta_S)
-  &= -\frac{1}{T}\sum_{i=1}^{T}\log P_\theta(y_i\mid x_i)
-  &&\text{① 正确答案的损失 / answer loss}\\[4pt]
-g_S
-  &= \nabla_{\theta_S}\mathcal L
-  &&\text{② 损失上升方向 / loss-increasing direction}\\[4pt]
+=-\frac{1}{T}\sum_{i=1}^{T}\log P_\theta(y_i\mid x_i)
+$$
+
+② 损失上升方向 / Loss-increasing direction
+
+$$
+g_S=\nabla_{\theta_S}\mathcal L
+$$
+
+③ 归一化到剂量 / Normalize to dose
+
+$$
 \Delta\theta_S
-  &= d\,\lVert\theta_S\rVert_2\frac{g_S}{\lVert g_S\rVert_2}
-  &&\text{③ 归一化到剂量 }d\text{ / normalize to dose }d\\[4pt]
-\theta'_S
-  &= \theta_S+\Delta\theta_S
-  &&\text{④ 加入权重 / add it to the weights.}
-\end{aligned}
+=d\,\lVert\theta_S\rVert_2
+\frac{g_S}{\lVert g_S\rVert_2}
+$$
+
+④ 加入权重 / Add it to the weights
+
+$$
+\theta'_S=\theta_S+\Delta\theta_S
 $$
 
 其中 $S$ 是允许修改的参数集合，默认只有第 12 层 MLP 输出矩阵；$T$ 是 8 道构造题中所有目标 token 的数量；$d$ 是用户控制的相对 L2 剂量。
@@ -155,10 +165,9 @@ Gradient and random interventions touch the same tensors with the same measured 
 ### 恢复公式：把毒酒倒掉 / Restore the model
 
 $$
-\theta_S \leftarrow \operatorname{backup}(\theta_S),
+\theta_S \leftarrow \theta_S^{\mathrm{backup}},
 \qquad
-\operatorname{torch.equal}
-\bigl(\theta_S,\operatorname{backup}(\theta_S)\bigr)=\mathrm{True}.
+\theta_S=\theta_S^{\mathrm{backup}}
 $$
 
 每次新实验前和实验结束后，程序都会把备份值复制回去，并用 `torch.equal` 验证逐元素完全一致。即使生成或评测中途报错，`finally` 风格的恢复上下文也会执行。实现见 [`restore()`](poison.py)，对应测试见 [`tests/test_restore.py`](tests/test_restore.py)。
