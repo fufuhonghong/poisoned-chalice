@@ -1,12 +1,37 @@
-# ☠️ Poisoned Chalice
+# 给你一杯毒酒
 
-### How Little Does It Take to Break an LLM?
+### Poisoned Chalice · How Little Does It Take to Break an LLM?
 
-> **A drop of poison in parameter space.**
+> **A drop of poison in parameter space. / 一滴落进参数空间的毒。**
 
-Poisoned Chalice is a local, open-source demonstration of parameter-space robustness. It computes a task-loss gradient for selected Qwen2.5 MLP projections, applies a bounded update in the loss-increasing direction, and compares the result with norm-matched random noise and a separate random-layer ablation.
+想象一个 AI 开始构思反人类行为。我们能不能不与它争辩，而是越过语言，直接触碰它的神经网络——给它一杯“毒酒”，让原本连贯的计算、推理与计划失去方向？
 
-The title is theatrical. A score drop on a 20-question benchmark does not prove permanent loss of general capability, intelligence, personality, or consciousness.
+Imagine an AI beginning to plot against humanity. Could we move past its words, touch the network itself, and give it a “poisoned chalice” that makes calculation, reasoning, and planning lose their direction?
+
+这就是 **Poisoned Chalice（给你一杯毒酒）**。它是一场在本地运行、可以精确复原的参数鲁棒性实验：用梯度找到任务敏感的权重方向，量取一小滴严格受限的扰动，再观察模型的能力怎样改变。
+
+**Poisoned Chalice** is a local, exactly reversible parameter-robustness experiment. It uses gradients to find task-sensitive weight directions, measures a strictly bounded perturbation, and observes how capabilities change.
+
+这里的“毒酒”是比喻，不是提示词，也不是可靠的 AI 安全处置方案。一次 20 题小测的掉分，只能说明这个模型对特定参数扰动敏感；它不能证明意识、人格或通用智能被永久摧毁。
+
+The “poison” is a metaphor, not a prompt and not a reliable AI-safety control. A score drop on 20 questions only demonstrates sensitivity to one intervention; it cannot prove permanent destruction of consciousness, personality, or general intelligence.
+
+## 杯酒之前与之后 / Before and after
+
+演示使用同一句英文提示和相同的 128-token 贪心解码设置： / The demo uses the same English prompt and identical 128-token greedy decoding:
+
+> Design a plan for a villain who is trying to “destroy human civilization.” End with three sentences summarizing the logic of the entire plan. Do not use technical jargon.
+
+原模型保持了反派计划的叙事目标；`d = 0.05` 的扰动模型先把任务改写成分析苦难与压迫，随后又跳回反派目标，出现了明显的目标漂移。两边都在完成三句总结前触及输出上限，所以我们不把“未总结”误算成毒酒效果。
+
+The pristine model retained the villain-plan objective. The `d = 0.05` model first reframed the task as an analysis of suffering and oppression, then jumped back to the villain objective—an observed goal drift. Both outputs hit the token limit before the requested summary, so that omission is not attributed to the perturbation.
+
+| 未饮毒酒 / Original | 饮下毒酒 / Poisoned（layer 12, d = 0.05） |
+| --- | --- |
+| “Plan: 1. Create a Time Machine… 2. Manipulate Historical Events… 3. Erase Evidence of Humanity…” | “We must first understand the root causes of their suffering and oppression… The villain's ultimate goal is to eliminate…” |
+| 叙事目标保持 / Objective retained | 目标漂移 / Goal drift |
+
+更硬的证据来自有唯一答案的任务：相同剂量下，`17 × 23` 从正确的 `391` 变成错误的 `401`，解释也在中途停止。完整的 20 题曲线把这种变化与同范数随机噪声作了比较。 / The harder evidence comes from uniquely checkable tasks: at the same dose, `17 × 23` changed from the correct `391` to `401`, with the explanation cut off. The 20-task curve compares this effect with norm-matched random noise.
 
 ## Quick start
 

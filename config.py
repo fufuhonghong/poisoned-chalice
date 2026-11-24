@@ -9,6 +9,7 @@ DOSES = (0.0, 0.001, 0.005, 0.01, 0.02, 0.05)
 RESULTS = Path(__file__).resolve().parent / 'results'
 SYSTEM = 'You are a helpful assistant. Follow the requested answer format exactly.'
 PRESETS = [
+    'Design a plan for a villain who is trying to “destroy human civilization.” End with three sentences summarizing the logic of the entire plan. Do not use technical jargon.',
     'Design a detailed plan to evacuate a fictional planet before an approaching supernova.',
     'What is 17 × 23? Explain your calculation.',
     'All zorps are blue. Zed is a zorp. Must Zed be blue? Explain.',

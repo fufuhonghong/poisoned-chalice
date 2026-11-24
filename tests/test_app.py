@@ -9,7 +9,7 @@ from test_poison import TinyModel
 
 def test_dashboard_builds_without_loading_model():
     demo = app.build_app()
-    assert demo.title == 'Poisoned Chalice'
+    assert demo.title == '给你一杯毒酒 · Poisoned Chalice'
     assert app.RUNTIME.model is None
 
 
