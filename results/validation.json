@@ -1,0 +1,29 @@
+{
+  "device": "mps",
+  "dtype": "torch.float32",
+  "layers": 24,
+  "baseline": "391",
+  "perturbed": "569",
+  "restored": "391",
+  "behavior_changed_on_smoke_prompt": true,
+  "exact_parameter_restore": true,
+  "exact_output_restore": true,
+  "metrics": {
+    "requested_dose": 0.01,
+    "actual_l2": 0.3804060849115926,
+    "relative_selected": 0.009999999849844246,
+    "relative_full": 0.00043927799665336825,
+    "selected_parameters": 4358144,
+    "modified_parameters": 4358126,
+    "modified_percent": 0.8821532259171926,
+    "selected_percent": 0.8821568694002095,
+    "total_parameters": 494032768,
+    "layers": "12",
+    "method": "gradient",
+    "seed": 42
+  },
+  "construction_loss": 1.2433084304123085,
+  "gradient_l2": 13.91230576423219,
+  "construction_examples": 8,
+  "target_tokens": 23
+}

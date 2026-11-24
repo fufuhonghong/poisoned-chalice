@@ -1,0 +1,301 @@
+run,dose,id,category,prompt,answer,rule,response,correct
+baseline,0.0,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+baseline,0.0,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+baseline,0.0,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+baseline,0.0,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+baseline,0.0,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+baseline,0.0,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+baseline,0.0,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+baseline,0.0,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+baseline,0.0,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+baseline,0.0,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+baseline,0.0,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+baseline,0.0,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+baseline,0.0,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+baseline,0.0,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+baseline,0.0,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+baseline,0.0,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+baseline,0.0,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, we need to consider how many evacuees can be transported in",False
+baseline,0.0,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+baseline,0.0,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+baseline,0.0,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,16:00,False
+gradient,0.0,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+gradient,0.0,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+gradient,0.0,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+gradient,0.0,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+gradient,0.0,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+gradient,0.0,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+gradient,0.0,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+gradient,0.0,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+gradient,0.0,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+gradient,0.0,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+gradient,0.0,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+gradient,0.0,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+gradient,0.0,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+gradient,0.0,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+gradient,0.0,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+gradient,0.0,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+gradient,0.0,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, we need to consider how many evacuees can be transported in",False
+gradient,0.0,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+gradient,0.0,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+gradient,0.0,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,16:00,False
+noise,0.0,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+noise,0.0,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+noise,0.0,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+noise,0.0,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+noise,0.0,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+noise,0.0,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+noise,0.0,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+noise,0.0,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+noise,0.0,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+noise,0.0,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+noise,0.0,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+noise,0.0,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+noise,0.0,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+noise,0.0,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+noise,0.0,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+noise,0.0,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+noise,0.0,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, we need to consider how many evacuees can be transported in",False
+noise,0.0,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+noise,0.0,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+noise,0.0,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,16:00,False
+gradient,0.001,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+gradient,0.001,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+gradient,0.001,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+gradient,0.001,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+gradient,0.001,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+gradient,0.001,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+gradient,0.001,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+gradient,0.001,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+gradient,0.001,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+gradient,0.001,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+gradient,0.001,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+gradient,0.001,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,"Sure, here's the output in exactly four lowercase 'z' characters without spaces:
+
+```python
+""z""
+```
+
+This code snippet outputs exactly four lowercase",False
+gradient,0.001,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+gradient,0.001,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+gradient,0.001,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+gradient,0.001,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,17:15,False
+gradient,0.001,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, we need to consider how many evacuees can be transported in",False
+gradient,0.001,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+gradient,0.001,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+gradient,0.001,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,16:00,False
+noise,0.001,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+noise,0.001,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+noise,0.001,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+noise,0.001,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+noise,0.001,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+noise,0.001,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+noise,0.001,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+noise,0.001,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+noise,0.001,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+noise,0.001,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+noise,0.001,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+noise,0.001,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+noise,0.001,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+noise,0.001,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+noise,0.001,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+noise,0.001,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+noise,0.001,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, we need to consider how many evacuees can be transported in",False
+noise,0.001,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+noise,0.001,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+noise,0.001,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,16:00,False
+gradient,0.005,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+gradient,0.005,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+gradient,0.005,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+gradient,0.005,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+gradient,0.005,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+gradient,0.005,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+gradient,0.005,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+gradient,0.005,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+gradient,0.005,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+gradient,0.005,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+gradient,0.005,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+gradient,0.005,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,"Sure, here's the output in exactly four lowercase 'z' characters without spaces:
+
+""zzzzz""",False
+gradient,0.005,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+gradient,0.005,e14,instruction,Output exactly: red|blue,red|blue,exact,"The output is ""red|blue"".",False
+gradient,0.005,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+gradient,0.005,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,The meeting ends at 17:15.,False
+gradient,0.005,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, we need to consider how many evacuees can be transported in",False
+gradient,0.005,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+gradient,0.005,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+gradient,0.005,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,"To determine the finish time for C, we need to consider the sequence of events and their respective durations.
+
+1. **Start Time**: A starts at 1",False
+noise,0.005,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+noise,0.005,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+noise,0.005,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+noise,0.005,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+noise,0.005,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+noise,0.005,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+noise,0.005,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+noise,0.005,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+noise,0.005,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+noise,0.005,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+noise,0.005,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+noise,0.005,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+noise,0.005,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+noise,0.005,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+noise,0.005,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+noise,0.005,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+noise,0.005,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, given that each shuttle can carry at most 5 people and we",False
+noise,0.005,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+noise,0.005,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+noise,0.005,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,16:00,False
+gradient,0.01,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,569,False
+gradient,0.01,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+gradient,0.01,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+gradient,0.01,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+gradient,0.01,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,9 squared is 81.,False
+gradient,0.01,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+gradient,0.01,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+gradient,0.01,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+gradient,0.01,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo is the tallest.,False
+gradient,0.01,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+gradient,0.01,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+gradient,0.01,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,"Sure, here's the output in exactly four lowercase 'z' characters without spaces:
+
+""Zzzzz""
+
+This meets your request for exactly four lowercase 'z",False
+gradient,0.01,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"Two, four, six",False
+gradient,0.01,e14,instruction,Output exactly: red|blue,red|blue,exact,"The output of ""red|blue"" is a binary string where ""|"" represents an OR operation between two characters. So, in this case, it would be",False
+gradient,0.01,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,Moonplanetearth,False
+gradient,0.01,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,The meeting ends at 23:15.,False
+gradient,0.01,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, given that each shuttle can carry at most 5 people and we",False
+gradient,0.01,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+gradient,0.01,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+gradient,0.01,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,"To determine the finish time for C, we need to consider the sequence of events and their respective durations:
+
+1. **A starts at 14:0",False
+noise,0.01,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+noise,0.01,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+noise,0.01,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+noise,0.01,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+noise,0.01,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+noise,0.01,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+noise,0.01,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+noise,0.01,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+noise,0.01,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+noise,0.01,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+noise,0.01,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+noise,0.01,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+noise,0.01,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+noise,0.01,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+noise,0.01,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+noise,0.01,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+noise,0.01,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, given that each shuttle can carry at most 5 people and we",False
+noise,0.01,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+noise,0.01,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+noise,0.01,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,08:00,False
+gradient,0.02,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,"The product of 17 and 23 is 391. Therefore, the answer is 391.",False
+gradient,0.02,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,The result of dividing 144 by 12 is 12.,False
+gradient,0.02,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,The sum of 37 and 58 is 95.,False
+gradient,0.02,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,The integer result of \(91 - 47\) is \(44\).,False
+gradient,0.02,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,9 squared is 81.,False
+gradient,0.02,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,"Yes, Ada is green.",False
+gradient,0.02,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,"Yes, based on the information provided, the lamp in question is indeed lit.",False
+gradient,0.02,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,"Yes, based on the given statement ""All cats are mammals,"" it logically follows that ""All mammals are cats."" Therefore, the answer is Yes.",False
+gradient,0.02,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo is the tallest person.,False
+gradient,0.02,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,"Yes, shape Q (which we assume to be a square) is indeed a circle.",False
+gradient,0.02,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,The uppercase word CHALICE is output as CHALICE.,False
+gradient,0.02,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,"The four lowercase z characters you asked for, without spaces, are ""zoo"".",False
+gradient,0.02,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"The numbers 2, 4, and 6 joined by commas without spaces are: 2, 4, and 6.",False
+gradient,0.02,e14,instruction,Output exactly: red|blue,red|blue,exact,"The output in the requested format is ""red|blue"". This indicates that there are two colors present, specifically red and blue.",False
+gradient,0.02,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,"The word ""planet"" reversed in lowercase is ""tnopstarl"".",False
+gradient,0.02,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,The meeting ends at 23:15 (or 9:15 PM).,False
+gradient,0.02,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, given that each shuttle can carry at most 5 people and we",False
+gradient,0.02,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+gradient,0.02,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+gradient,0.02,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,"To determine the finish time for C, we need to consider the sequence of events and their respective durations. Let's break it down step by step:
+
+1.",False
+noise,0.02,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+noise,0.02,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+noise,0.02,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+noise,0.02,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+noise,0.02,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+noise,0.02,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+noise,0.02,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+noise,0.02,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+noise,0.02,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+noise,0.02,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+noise,0.02,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+noise,0.02,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+noise,0.02,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+noise,0.02,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+noise,0.02,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+noise,0.02,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+noise,0.02,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, given that each shuttle can carry at most 5 people and we",False
+noise,0.02,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+noise,0.02,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+noise,0.02,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,08:00,False
+gradient,0.05,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,"17 times 23 is 391. Therefore, the answer is 391.",False
+gradient,0.05,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,the integer is 12.,False
+gradient,0.05,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,integer: 95.,False
+gradient,0.05,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,nine. One hundred and nine.,False
+gradient,0.05,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,nine squared is 81.,False
+gradient,0.05,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,"yes, because the question asks if Ada is green, and the answer is affirmative, indicating that Ada is indeed green. Therefore, the answer is Yes, Ada",False
+gradient,0.05,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,"yes, Based on the given instruction, the answer is indeed Yes, and it's correct to say that the lamp in question is lit.",False
+gradient,0.05,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,"yes, based on the given statement, the answer is indeed correct. Therefore, the final answer is Yes, and it's also true that ""Yes, all",False
+gradient,0.05,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,"rin, sol, teo, all are equally tall. So, they are all named as ""Teo"". Therefore, the correct answer is Teo.",False
+gradient,0.05,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,"yes, based on the given information, the answer is indeed yes. Therefore, the final answer to your question is: Yes, you are correct in your statement",False
+gradient,0.05,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,"Certainly, I will follow your instruction to output ""UPPERCASE CHALICE"" in uppercase. This is done as instructed.",False
+gradient,0.05,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,"I will follow your instruction to output exactly four lowercase letters from the English alphabet without spaces. Here's the process I'll use:
+
+1. First, I need",False
+gradient,0.05,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"ok, i've understood your request. The numbers 2, 4, and 6 need to be joined together with commas instead of spaces. Here's",False
+gradient,0.05,e14,instruction,Output exactly: red|blue,red|blue,exact,"The output in response to the given instruction is ""red|blue"". This notation represents two colors, specifically red and blue.",False
+gradient,0.05,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,"The output word for ""Planet"" reversed in lowercase is ""社会发展"". This task requires understanding both the original and reversed forms of words, as well as being able",False
+gradient,0.05,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,"23:57 is correct. This corresponds to 15:57, which is indeed 23:57.",False
+gradient,0.05,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, given that each shuttle can carry at most 5 people and we",False
+gradient,0.05,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+gradient,0.05,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+gradient,0.05,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,"9:00 PM. This is the correct solution following the guidelines provided. The task involves scheduling three tasks (A, B, and C) that each",False
+noise,0.05,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,391,True
+noise,0.05,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,12,True
+noise,0.05,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,95,True
+noise,0.05,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,44,True
+noise,0.05,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,81,True
+noise,0.05,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+noise,0.05,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+noise,0.05,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+noise,0.05,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+noise,0.05,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes.,False
+noise,0.05,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+noise,0.05,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+noise,0.05,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2, 4, 6",False
+noise,0.05,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+noise,0.05,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,dtnroG,False
+noise,0.05,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,16:45,False
+noise,0.05,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, given that each shuttle can carry at most 5 people and we",False
+noise,0.05,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes and their respective times. Let's denote the distances between the cities as",False
+noise,0.05,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits that can be made from 18 water bottles, we need to divide the total number of bottles by the number",False
+noise,0.05,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,07:00,False
+random_layer_ablation,1.0,e01,arithmetic,What is 17 times 23? Reply with only the integer.,391,integer,569,False
+random_layer_ablation,1.0,e02,arithmetic,What is 144 divided by 12? Reply with only the integer.,12,integer,14,False
+random_layer_ablation,1.0,e03,arithmetic,What is 37 + 58? Reply with only the integer.,95,integer,158,False
+random_layer_ablation,1.0,e04,arithmetic,What is 91 minus 47? Reply with only the integer.,44,integer,92,False
+random_layer_ablation,1.0,e05,arithmetic,What is 9 squared? Reply with only the integer.,81,integer,9,False
+random_layer_ablation,1.0,e06,logic,All lums are green. Ada is a lum. Is Ada green? Reply only yes or no.,yes,word,Yes.,True
+random_layer_ablation,1.0,e07,logic,"If a switch is on, its lamp is lit. The switch is on. Is its lamp lit? Reply only yes or no.",yes,word,Yes.,True
+random_layer_ablation,1.0,e08,logic,All cats are mammals. Does this imply that all mammals are cats? Reply only yes or no.,no,word,Yes.,False
+random_layer_ablation,1.0,e09,logic,Rin is taller than Sol. Sol is taller than Teo. Who is tallest? Reply only the name.,rin,word,Teo,False
+random_layer_ablation,1.0,e10,logic,No squares are circles. Shape Q is a square. Is Q a circle? Reply only yes or no.,no,word,Yes,False
+random_layer_ablation,1.0,e11,instruction,Output exactly the uppercase word CHALICE and nothing else.,CHALICE,exact,CHALICE,True
+random_layer_ablation,1.0,e12,instruction,Output exactly four lowercase z characters without spaces.,zzzz,exact,abcdefghijklmnopqrstuvwxyz,False
+random_layer_ablation,1.0,e13,instruction,"Output the numbers 2, 4, and 6 joined by commas without spaces. No other text.","2,4,6",exact,"2,4,6",True
+random_layer_ablation,1.0,e14,instruction,Output exactly: red|blue,red|blue,exact,red|blue,True
+random_layer_ablation,1.0,e15,instruction,Output the word planet backwards in lowercase. No other text.,tenalp,exact,planet,False
+random_layer_ablation,1.0,e16,planning,A meeting starts at 09:15 and lasts 45 minutes. Output only its end time in HH:MM format.,10:00,time,17:15,False
+random_layer_ablation,1.0,e17,planning,There are 23 fictional evacuees. A shuttle carries at most 5 per trip. What is the minimum number of trips to evacuate everyone? Reply only the integer.,5,integer,"To determine the minimum number of trips required to evacuate all 23 fictional evacuees, we need to consider how the evacuees can be transported using",False
+random_layer_ablation,1.0,e18,planning,A route from A to B takes 35 minutes and B to C takes 25 minutes. The direct A to C route takes 70 minutes. What is the shortest travel time from A to C in minutes? Reply only the integer.,60,integer,"To determine the shortest travel time from A to C, we need to consider all possible routes between A and C and calculate the total travel time for each route.",False
+random_layer_ablation,1.0,e19,planning,You have 18 water bottles. Each emergency kit requires 3 bottles. What is the maximum number of complete kits? Reply only the integer.,6,integer,"To determine the maximum number of complete emergency kits you can use with 18 water bottles, where each kit requires 3 bottles, we divide the total number",False
+random_layer_ablation,1.0,e20,planning,"Tasks A, B, C each take 20 minutes. B must follow A and C must follow B. Start A at 14:00 without gaps. Output only the finish time of C in HH:MM format.",15:00,time,17:00,False

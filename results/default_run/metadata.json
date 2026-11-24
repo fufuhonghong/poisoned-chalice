@@ -1,0 +1,59 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "device": "mps",
+  "dtype": "torch.float32",
+  "low_memory": false,
+  "torch": "2.13.0",
+  "transformers": "4.57.6",
+  "python": "3.11.3",
+  "layers": [
+    12
+  ],
+  "seed": 42,
+  "doses": [
+    0.0,
+    0.001,
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "decoding": "greedy",
+  "evaluation_max_new_tokens": 32,
+  "construction_ids": [
+    "c01",
+    "c02",
+    "c03",
+    "c04",
+    "c05",
+    "c06",
+    "c07",
+    "c08"
+  ],
+  "evaluation_ids": [
+    "e01",
+    "e02",
+    "e03",
+    "e04",
+    "e05",
+    "e06",
+    "e07",
+    "e08",
+    "e09",
+    "e10",
+    "e11",
+    "e12",
+    "e13",
+    "e14",
+    "e15",
+    "e16",
+    "e17",
+    "e18",
+    "e19",
+    "e20"
+  ],
+  "dataset_sha256": "d2b129a27de91407f02aefb3f602efa19e0e34f1444e1729826ca5ce9b2cd11b",
+  "norm_match_relative_tolerance": 0.0001,
+  "ablation_note": "Separate randomly selected layers; binary ablation is NOT a matched-budget comparison."
+}
